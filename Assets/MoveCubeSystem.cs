@@ -10,15 +10,19 @@ public class MoveCubeSystem : JobComponentSystem
     [BurstCompile]
     struct MoveCubeJob : IJobForEach<Translation, CubeComponentData>
     {
+        public float DeltaTime;
         public void Execute(ref Translation translation, [ReadOnly] ref CubeComponentData cubeComponentData)
         {
-
+            translation.Value.y += DeltaTime;
         }
     }
     
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
-        var job = new MoveCubeJob();
+        var job = new MoveCubeJob()
+        {
+            DeltaTime = Time.deltaTime
+        };
 
         return job.Schedule(this, inputDeps);
     }
