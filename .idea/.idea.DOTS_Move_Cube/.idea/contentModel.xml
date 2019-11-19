@@ -9,6 +9,9 @@
         <e p="CubeComponentData.cs" t="Include" />
         <e p="CubeEntityConversion.cs" t="Include" />
         <e p="MoveCubeSystem.cs" t="Include" />
+        <e p="MoveSphereSystem.cs" t="Include" />
+        <e p="SphereComponentData.cs" t="Include" />
+        <e p="SphereEntityConversion.cs" t="Include" />
       </e>
       <e p="DOTS_Move_Cube.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
